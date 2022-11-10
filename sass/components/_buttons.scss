@@ -1,0 +1,16 @@
+.btn {
+  &-cta {
+    display: block;
+    width: 200px;
+    height: 56px;
+    border-radius: 28px;
+    background-color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (min-width: $bp-tiny) and (max-width: calc($bp-small - 0.02px)) {
+      height: 40px;
+    }
+  }
+}

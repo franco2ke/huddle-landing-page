@@ -1,0 +1,41 @@
+.social {
+  display: flex;
+  gap: 16px;
+  justify-self: end;
+  align-self: center;
+
+  @media only screen and (min-width: $bp-medium) and (max-width: calc($bp-largest - 0.02px)) {
+    align-self: end;
+  }
+
+  @media only screen and (min-width: $bp-tiny) and (max-width: calc($bp-medium - 0.02px)) {
+    justify-self: center;
+    align-self: end;
+    gap: 10.5px;
+  }
+
+  &__media-link {
+    line-height: 10px;
+  }
+
+  &__icon {
+    padding: 9px;
+    width: 40px;
+    height: 40px;
+    fill: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+
+    @media only screen and (min-width: $bp-tiny) and (max-width: calc($bp-medium - 0.02px)) {
+      height: 28px;
+      width: 28px;
+      padding: 5.5px;
+    }
+
+    &:focus,
+    &:hover {
+      fill: #ff52c1;
+      border-color: #ff52c1;
+    }
+  }
+}

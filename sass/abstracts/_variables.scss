@@ -1,23 +1,25 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
 // COLORS
-$color-primary: #38aecc; // original shade
-$color-primary-light: #89cfe1;
-$color-primary-dark: #278299;
+$color-primary: hsl(257, 40%, 49%); // original shade
+$color-primary-light: #e882e8;
 
-$color-secondary-light: #f9af73;
-$color-secondary-dark: #da670a; // original shade
+$color-secondary: #ff7909; // original shade
+$color-secondary-light: #da670a;
 
-$color-tertiary-light: #00f0c7;
-$color-tertiary-dark: #00bd9d; // original shade
+$color-tertiary: #2d3142; // original shade
+$color-tertiary-light: #b3c5d7;
 
-$color-grey-light-1: #f7f7f7;
-$color-grey-light-2: #eee;
-
-$color-grey-dark-1: #777;
-$color-grey-dark-2: #333;
-$color-grey-dark-3: #ccc;
+$color-grey: #bfc0c0; // original shade
+$color-grey-light: #d8e1e9;
+$color-grey-dark: #495057; // substitute for typography black
 
 $color-white: #fff;
-$color-black: #000;
 
 // FONT
 $default-font-size: 1.8rem;
@@ -33,3 +35,4 @@ $bp-largest: 75em; // 75 * 16px = 1200px;
 $bp-large: 62.5em; // 62.5 * 16px = 1000px;
 $bp-medium: 50em; // 50 * 16px = 800px;
 $bp-small: 37.5em; // 37.5em * 16px = 600px;
+$bp-tiny: 12.5em; // 12.5em * 16px = 200px;

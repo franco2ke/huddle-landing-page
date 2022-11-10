@@ -1,10 +1,18 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
 /* Reset margins, paddings and box-sizing to best defaults */
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 /* 
 * 1. Set the rem (root em) unit for relative sizing
@@ -16,22 +24,21 @@
 * 3. Prevent adjustments of font size after orientation changes in iOS.
 */
 html {
-  font-size: 62.5%;
-  /* 1 */
-  line-height: 1.15;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 3 */ }
+  font-size: 62.5%; /* 1 */
+  line-height: 1.15; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 3 */
+}
 
 body {
   box-sizing: border-box;
-  background-color: #f7f7f7; }
+}
 
 /*
   * Allow only vertical resizing of textareas.
   */
 textarea {
-  resize: vertical; }
+  resize: vertical;
+}
 
 /* Forms **************************************/
 /**
@@ -43,18 +50,235 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */ }
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.8;
-  color: #777; }
+  color: #fff;
+}
+
+.layout-container-flex {
+  display: flex;
+}
+.layout-container-grid {
+  display: grid;
+}
+
+.btn-cta {
+  display: block;
+  width: 200px;
+  height: 56px;
+  border-radius: 28px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (min-width: 12.5em) and (max-width: calc(37.5em - 0.02px)) {
+  .btn-cta {
+    height: 40px;
+  }
+}
+
+.hero__img-box {
+  flex: 0 1 48.33vw;
+  align-self: center;
+}
+@media only screen and (min-width: 62.5em) and (max-width: calc(75em - 0.02px)) {
+  .hero__img-box {
+    flex: 0 1 40vw;
+  }
+}
+@media only screen and (min-width: 37.5em) and (max-width: calc(62.5em - 0.02px)) {
+  .hero__img-box {
+    flex: 0 1 372px;
+  }
+}
+@media only screen and (min-width: 12.5em) and (max-width: calc(50em - 0.02px)) {
+  .hero__img-box {
+    flex: 1 0 auto;
+    width: 97.3%;
+  }
+}
+.hero__img {
+  display: block;
+  width: 100%;
+}
+.hero__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 32px;
+  flex: 0 1 520px;
+  align-self: start;
+}
+@media only screen and (min-width: 62.5em) and (max-width: calc(75em - 0.02px)) {
+  .hero__heading {
+    gap: 20px;
+    flex: 0 1 500px;
+  }
+}
+@media only screen and (min-width: 12.5em) and (max-width: calc(50em - 0.02px)) {
+  .hero__heading {
+    align-items: center;
+    flex: 0 1 auto;
+    gap: 16px;
+    padding-top: 24px;
+  }
+}
+.hero__headline {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.5;
+}
+@media only screen and (min-width: 50em) and (max-width: calc(75em - 0.02px)) {
+  .hero__headline {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+@media only screen and (min-width: 12.5em) and (max-width: calc(50em - 0.02px)) {
+  .hero__headline {
+    text-align: center;
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 12.5em) and (max-width: calc(50em - 0.02px)) {
+  .hero__description {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-bottom: 8px;
+  }
+}
+.hero__btn-cta {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+@media only screen and (min-width: 12.5em) and (max-width: calc(37.5em - 0.02px)) {
+  .hero__btn-cta {
+    font-size: 12px;
+  }
+}
+.hero__btn-cta:link {
+  color: green;
+}
+.hero__btn-cta:visited {
+  color: hsl(257deg, 40%, 49%);
+}
+.hero__btn-cta:focus, .hero__btn-cta:hover {
+  color: #fff;
+  background-color: #e882e8;
+  transform: translateY(-2px);
+  box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.2586);
+}
+
+.social {
+  display: flex;
+  gap: 16px;
+  justify-self: end;
+  align-self: center;
+}
+@media only screen and (min-width: 50em) and (max-width: calc(75em - 0.02px)) {
+  .social {
+    align-self: end;
+  }
+}
+@media only screen and (min-width: 12.5em) and (max-width: calc(50em - 0.02px)) {
+  .social {
+    justify-self: center;
+    align-self: end;
+    gap: 10.5px;
+  }
+}
+.social__media-link {
+  line-height: 10px;
+}
+.social__icon {
+  padding: 9px;
+  width: 40px;
+  height: 40px;
+  fill: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+@media only screen and (min-width: 12.5em) and (max-width: calc(50em - 0.02px)) {
+  .social__icon {
+    height: 28px;
+    width: 28px;
+    padding: 5.5px;
+  }
+}
+.social__icon:focus, .social__icon:hover {
+  fill: #ff52c1;
+  border-color: #ff52c1;
+}
+
+.header {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  padding: 64px 85px 40px 80px;
+  display: grid;
+  grid-template-rows: minmax(min-content, 132px) min-content 1fr;
+}
+@media only screen and (max-width: 37.5em) {
+  .header {
+    background-image: url("../img/bg-mobile.svg"), linear-gradient(to right, rgb(103, 75, 175), rgb(103, 75, 175));
+    background-size: 100% auto;
+  }
+}
+@media only screen and (min-width: calc(37.5em + 0.02px)) {
+  .header {
+    background-image: url("../img/bg-desktop.svg"), linear-gradient(to right, rgb(103, 75, 175), rgb(103, 75, 175));
+    background-size: auto 100%;
+  }
+}
+@media only screen and (min-width: 37.5em) and (max-width: calc(62.5em - 0.02px)) {
+  .header {
+    padding: 64px 35px 40px 36px;
+    min-height: auto;
+    grid-template-rows: minmax(min-content, 100px) min-content minmax(min-content, 120px);
+  }
+}
+@media only screen and (min-width: 12.5em) and (max-width: calc(37.5em - 0.02px)) {
+  .header {
+    padding: 38.2px 35px 40px 36px;
+    grid-template-rows: minmax(min-content, 86px) min-content minmax(min-content, 92px);
+  }
+}
+@media only screen and (min-width: 50em) and (max-width: calc(62.5em - 0.02px)) {
+  .header__logo {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 12.5em) and (max-width: calc(37.5em - 0.02px)) {
+  .header__logo {
+    width: 120px;
+    margin-left: 4px;
+  }
+}
+.header__hero {
+  gap: 59px;
+  justify-content: space-evenly;
+}
+@media only screen and (min-width: 37.5em) and (max-width: calc(62.5em - 0.02px)) {
+  .header__hero {
+    gap: 36px;
+  }
+}
+@media only screen and (min-width: 12.5em) and (max-width: calc(50em - 0.02px)) {
+  .header__hero {
+    gap: 36px;
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

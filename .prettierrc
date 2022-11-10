@@ -1,9 +1,10 @@
 {
+  "singleQuote": false,
   "overrides": [
     {
       "files": "*.html",
       "options": {
-        "printWidth": 120
+        "printWidth": 140
       }
     }
   ]

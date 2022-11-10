@@ -1,0 +1,65 @@
+.header {
+  // the background consists of 3 images, 2 of which are actually gradients
+  // Load different background image based on screen size
+  // Load background image for small screens; mobile
+  @media only screen and (max-width: $bp-small) {
+    background-image: url("../img/bg-mobile.svg"),
+      linear-gradient(to right, rgba(103, 75, 175, 1), rgba(103, 75, 175, 1));
+    background-size: 100% auto;
+  }
+  // For large screens; desktop and laptops
+  @media only screen and (min-width: calc($bp-small + 0.02px)) {
+    background-image: url("../img/bg-desktop.svg"),
+      linear-gradient(to right, rgba(103, 75, 175, 1), rgba(103, 75, 175, 1));
+    background-size: auto 100%;
+  }
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  padding: 64px 85px 40px 80px;
+  // make header grid-container to facilitate element positioning during responsive design.
+  display: grid;
+  grid-template-rows: minmax(min-content, 132px) min-content 1fr;
+
+  @media only screen and (min-width: $bp-small) and (max-width: calc($bp-large - 0.02px)) {
+    padding: 64px 35px 40px 36px;
+    min-height: auto;
+    grid-template-rows: minmax(min-content, 100px) min-content minmax(
+        min-content,
+        120px
+      );
+  }
+
+  @media only screen and (min-width: $bp-tiny) and (max-width: calc($bp-small - 0.02px)) {
+    padding: 38.2px 35px 40px 36px;
+    // min-height: 100vh;
+    grid-template-rows: minmax(min-content, 86px) min-content minmax(
+        min-content,
+        92px
+      );
+  }
+
+  &__logo {
+    // margin-bottom: 100px;
+    @media only screen and (min-width: $bp-medium) and (max-width: calc($bp-large - 0.02px)) {
+      margin-bottom: 20px;
+    }
+    @media only screen and (min-width: $bp-tiny) and (max-width: calc($bp-small - 0.02px)) {
+      width: 120px;
+      margin-left: 4px;
+    }
+  }
+
+  &__hero {
+    gap: 59px;
+    justify-content: space-evenly;
+
+    @media only screen and (min-width: $bp-small) and (max-width: calc($bp-large - 0.02px)) {
+      gap: 36px;
+    }
+
+    @media only screen and (min-width: $bp-tiny) and (max-width: calc($bp-medium - 0.02px)) {
+      gap: 36px;
+      flex-direction: column;
+    }
+  }
+}

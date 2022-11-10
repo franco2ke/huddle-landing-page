@@ -1,0 +1,94 @@
+.hero {
+  &__img-box {
+    flex: 0 1 48.33vw;
+    align-self: center;
+    @media only screen and (min-width: $bp-large) and (max-width: calc($bp-largest - 0.02px)) {
+      flex: 0 1 40vw;
+    }
+    @media only screen and (min-width: $bp-small) and (max-width: calc($bp-large - 0.02px)) {
+      flex: 0 1 372px;
+    }
+
+    @media only screen and (min-width: $bp-tiny) and (max-width: calc($bp-medium - 0.02px)) {
+      flex: 1 0 auto;
+      // width defined explicitly as flex-basis defines height due to flex-direction change.
+      width: 97.3%;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 32px;
+    flex: 0 1 520px;
+    align-self: start;
+
+    @media only screen and (min-width: $bp-large) and (max-width: calc($bp-largest - 0.02px)) {
+      gap: 20px;
+      flex: 0 1 500px;
+    }
+    @media only screen and (min-width: $bp-tiny) and (max-width: calc($bp-medium - 0.02px)) {
+      align-items: center;
+      // Resize hero heading from 520px to content size
+      flex: 0 1 auto;
+      // Resize spacing between button, paragraph and headline
+      gap: 16px;
+      // Resize padding to reduce distance between hero heading and hero image in column layout
+      padding-top: 24px;
+    }
+  }
+
+  &__headline {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.5;
+    @media only screen and (min-width: $bp-medium) and (max-width: calc($bp-largest - 0.02px)) {
+      font-size: 36px;
+      line-height: 48px;
+    }
+    @media only screen and (min-width: $bp-tiny) and (max-width: calc($bp-medium - 0.02px)) {
+      text-align: center;
+      font-size: 24px;
+    }
+  }
+
+  &__description {
+    @media only screen and (min-width: $bp-tiny) and (max-width: calc($bp-medium - 0.02px)) {
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.5;
+      padding-bottom: 8px;
+    }
+  }
+
+  &__btn-cta {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    @media only screen and (min-width: $bp-tiny) and (max-width: calc($bp-small - 0.02px)) {
+      font-size: 12px;
+    }
+
+    &:link {
+      color: green;
+    }
+
+    &:visited {
+      color: $color-primary;
+    }
+
+    &:focus,
+    &:hover {
+      color: $color-white;
+      background-color: $color-primary-light;
+      transform: translateY(-2px);
+      box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.2586);
+    }
+  }
+}
