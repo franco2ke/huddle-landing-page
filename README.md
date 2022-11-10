@@ -18,7 +18,7 @@ This the [Huddle Landing Page Hero](design/desktop-preview.png). Thanks for chec
 
 ## Overview
 
-This is a landing page section for an online service. Also called a hero, it is the 1st thing a potential user sees when they visit your site. During that first visit, the visitor makes a judgement on your site and hence services in less than 5 seconds. That's why landing page designs are critical.
+This is a landing page section for an online service. Also called a hero, it is the 1st thing a potential user sees when they visit your site. During that first visit, the visitor makes a judgement about your site, deciding whether they like it or not, and hence your offering in less than 5 seconds. That's why landing page designs are critical.
 
 While looking visually appealing, a great landing page should communicate your name, brand, what you do and entice the visitor with a CTA ( call to Action ).
 
@@ -40,7 +40,7 @@ The colors in this template have been carefully chosen to share the branding. An
 
 ### Links
 
-- Solution URL: [https://github.com/franco2ke/single-price-grid-component](https://github.com/franco2ke/single-price-grid-component)
+- Solution URL: [https://franco2ke.github.io/huddle-landing-page/](https://franco2ke.github.io/huddle-landing-page/)
 
 ## My process
 
@@ -48,9 +48,9 @@ I started by examining the design files. This helped me draw up a rough html str
 
 I found that I required to create a parent container element that would contain the css background images, which also required a gradient.
 
-Next step was to create a 3 row grid container; top row 1 for the Huddle logo, row 2 for the hero image, headline content and call to action button and row 3 for the social media icons. I started by arranging these three sections with a default, block layout but I found the responsive spacing and positioning somewhat complicated afterwhich I opted for CSS Grid.
+Next step was to create a 3 row grid container; top row 1 for the Huddle logo, row 2 for the hero image, headline content and call to action button and row 3 for the social media icons. Before this approach I started by arranging these three sections with a default, block layout but I found the responsive spacing and positioning somewhat complicated afterwhich I opted for CSS Grid.
 
-For the hero image and headline content, flexbox was used. I have found flexbox and CSS grid quite useful for responsive positioning and spacing.
+For the hero image and headline content, flexbox was used. I have found flexbox and CSS grid quite useful for easier responsive positioning, spacing and sizing.
 
 ### Built with
 

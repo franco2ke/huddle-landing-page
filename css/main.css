@@ -174,7 +174,7 @@ body {
   }
 }
 .hero__btn-cta:link {
-  color: green;
+  color: hsl(257deg, 40%, 49%);
 }
 .hero__btn-cta:visited {
   color: hsl(257deg, 40%, 49%);
