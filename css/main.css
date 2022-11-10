@@ -71,6 +71,11 @@ body {
   display: grid;
 }
 
+.attribution {
+  color: #495057;
+  padding: 10px 0;
+}
+
 .btn-cta {
   display: block;
   width: 200px;
